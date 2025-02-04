@@ -1,0 +1,40 @@
+Put Database SQL code here:
+
+CREATE TABLE [dbo].[ClientList]
+(
+	[Client ID] INT NOT NULL PRIMARY KEY, 
+    [Maximum Risk Allowance] NVARCHAR(50) NOT NULL, 
+    [Class] NVARCHAR(50) NOT NULL, 
+    [Country Where Based] NVARCHAR(50) NOT NULL, 
+    [Region Where Based] NVARCHAR(50) NOT NULL, 
+    [First Name] NVARCHAR(50) NOT NULL, 
+    [Last Name] NVARCHAR(50) NOT NULL, 
+    [Title] NVARCHAR(50) NOT NULL
+)
+CREATE TABLE [dbo].[Login]
+(
+    [Username] NVARCHAR(50) NOT NULL, 
+	[Login_id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Password] NVARCHAR(MAX) NOT NULL, 
+    [Acccount_type] NCHAR(10) NOT NULL
+)
+SET IDENTITY_INSERT [dbo].[Login] ON
+INSERT INTO [dbo].[Login] ([Login_id], [Username], [Password], [Acccount_type]) VALUES (1, N'Daniel', N'Awesome', N'RM        ')
+INSERT INTO [dbo].[Login] ([Login_id], [Username], [Password], [Acccount_type]) VALUES (2, N'chris', N'chris12', N'creator   ')
+INSERT INTO [dbo].[Login] ([Login_id], [Username], [Password], [Acccount_type]) VALUES (3, N'Micheal', N'Micheal1', N'IT        ')
+SET IDENTITY_INSERT [dbo].[Login] OFF
+
+CREATE TABLE [dbo].[Idea]
+(
+	[Idea_id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Risk_rating] VARCHAR NULL, 
+    [Abstract] VARCHAR(200) NULL, 
+    [Country_availability] VARCHAR(50) NULL, 
+    [Regional_availability] VARCHAR(50) NULL, 
+    [Currency_type] VARCHAR(20) NULL, 
+    [Idea_type] VARCHAR(50) NULL, 
+    [Publish_date] DATE NULL, 
+    [Expire_date] DATE NULL, 
+    [Idea_title] VARCHAR(50) NULL, 
+    [Idea_document] VARCHAR(MAX) NULL
+)
