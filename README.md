@@ -1,4 +1,7 @@
 Software Engineering Project
+
+
+
 Description
 This project is a software solution designed to manage ideas, user authentication, and account management. It allows users to create, view, assign, and delete ideas, while ensuring secure login and password handling.
 
